@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="123010" started-at="2017-01-05T13:01:36Z" finished-at="2017-01-05T13:03:39Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="123010" started-at="2017-01-05T13:01:36Z" finished-at="2017-01-05T13:03:39Z">
+      <class name="com.liqvid.scripts.SampleTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.liqvid.scripts.SampleTest@71be98f5]" name="setUp" is-config="true" duration-ms="9117" started-at="2017-01-05T18:31:36Z" finished-at="2017-01-05T18:31:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="adminLogin()[pri:1, instance:com.liqvid.scripts.SampleTest@71be98f5]" name="adminLogin" duration-ms="113300" started-at="2017-01-05T18:31:45Z" description="To Verify the display of Elements in Auditor Login Page" finished-at="2017-01-05T18:33:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.liqvid.scripts.SampleTest@71be98f5]" name="tearDown" is-config="true" duration-ms="571" started-at="2017-01-05T18:33:38Z" finished-at="2017-01-05T18:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.liqvid.scripts.SampleTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
