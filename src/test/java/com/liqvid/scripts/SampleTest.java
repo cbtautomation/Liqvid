@@ -7,22 +7,24 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import com.liqvid.library.BaseLib;
+import com.liqvid.library.GenericLib;
 
-public class SampleTest extends BaseLib {
+public class SampleTest extends BaseLib  {
 	
 	@Test(priority=1,enabled=true, description="To Verify the display of Elements in Auditor Login Page")
 	public void adminLogin() throws InterruptedException{
 		
-		WebDriver driver=new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		driver.get("http://10.10.12.189:4001/learning/index.php/user/liqvidSession");
+		
+		driver.get("http://10.10.12.189:4001/learning/index.php/site/login");
 		driver.findElement(By.id("LoginForm_username")).sendKeys("RaghuKiran-1-71-2");
 		driver.findElement(By.id("LoginForm_password")).sendKeys("raghukiran92");
 		Thread.sleep(4000);
@@ -56,7 +58,13 @@ public class SampleTest extends BaseLib {
     	  Thread.sleep(4000);
       js.executeScript("arguments[0].click();", element3);
       }
+      driver.switchTo().window(parentWindowId);
         Thread.sleep(6000);
+        driver.quit();
+		
+	}
+	@Test(priority=2,enabled=true, description="To Verify the display of Elements in Auditor Login Page")
+	public void test1(){
 		
 	}
 

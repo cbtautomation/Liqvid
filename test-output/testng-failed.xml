@@ -6,4 +6,15 @@
       <class name="com.liqvid.scripts.SampleTest"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.liqvid.scripts.SampleTest">
+        <methods>
+          <include name="adminLogin"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.liqvid.scripts.SampleTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,13 +22,19 @@ public class BaseLib {
 		try{
 		if(GenericLib.getCongigValue(GenericLib.sConfigFile, "BROWSER").equalsIgnoreCase("Chrome")){
 			System.setProperty("webdriver.chrome.driver",GenericLib.sDirPath+"\\resources\\chromedriver.exe");
-			System.out.println("Chrome is set");
+			System.out.println("Chrome Browser is set");
 			driver = new ChromeDriver();
-		}else
+		}else if(GenericLib.getCongigValue(GenericLib.sConfigFile, "BROWSER").equalsIgnoreCase("Firefox"))
 		{
-			System.out.println("Firefox is set");
+			System.setProperty("webdriver.gecko.driver",GenericLib.sDirPath+"\\resources\\geckodriver.exe");
+			System.out.println("Firefox Browser is set");
 			driver = new FirefoxDriver();
-		}		
+		}
+		else{
+			System.setProperty("webdriver.ie.driver", GenericLib.sDirPath+"\\resources\\IEDriverServer.exe");
+			System.out.println("InternetExplorer Browser is set");
+			driver = new InternetExplorerDriver();
+		}
 		NXGReports.setWebDriver(driver);
 		}
 		catch(Exception e){
